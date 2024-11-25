@@ -1,0 +1,68 @@
+<main role="main">
+  <div class="about-container">
+    <section class="sect-about">
+      <!-- Votre contenu sur l'entreprise -->
+      <h1>Au Petit Village</h1>
+      <article>
+        <p>Au petit village est une entreprise qui confectionne des figurines inspirées de la bande dessinée Astérix et Obélix.</p>
+        <div class="figurines">
+          <img src="../../assets/img/figurines.jpg" alt="image de figurines">
+        </div>
+      </article>
+    </section>
+    <section class="sect-listProduct">
+      <h1>Catalogue de produits</h1>
+      <p>Toutes nos figurines sont faites à la main par notre équipe de gaulois.</p>
+
+      <!-- Sélecteur de tri et barre de recherche -->
+      <div class="row">
+        <div class="col-12">
+          <!-- Sélecteur de tri -->
+          <label for="search">Trier par :</label>
+          <select id="sort-by" class="form-select" (change)="sortProducts($event)">
+            <option *ngFor="let option of ['asc', 'desc']" [value]="option">
+              {{ option === "asc" ? "Prix croissant" : "Prix décroissant" }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Barre de recherche -->
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Rechercher un produit" [(ngModel)]="searchTerm"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Liste des produits -->
+      <div class="row products-list">
+        <!-- Boucle sur les produits -->
+        <div class="col-12 col-md-4"
+          *ngFor=" let product of products | filterByName : searchTerm | sortByPrice : order">
+          <!-- Carte de produit -->
+          <div class="card flex-wrap">
+            <img
+              [src]="product.picture"
+              class="card-img-top img-fluid"
+              [alt]="product.name" />
+            <div class="card-body">
+              <div *ngIf="selectedProductId as productId"></div>
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">
+                Prix: {{ product.price | currency : "EUR" }}
+              </p>
+              <button
+                type="button"
+                class="btn btn-product"
+                (click)="viewProduct(product.id)">
+                Voir le produit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

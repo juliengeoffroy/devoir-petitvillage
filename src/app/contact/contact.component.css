@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  background-color: var(--primary-color);
+  padding-top: 30px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.error-message {
+  text-align: center;
+  background-color: red;
+  color: white;
+  padding-top: 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+form {
+  justify-content: center;
+}
+
+.btn {
+  width: auto;
+  background-color: var(--secondary-color);
+}
+
+.btn:hover {
+  width: auto;
+  background-color: var(--quaternary-color);
+  color: white;
+}
+
+.success-message {
+  text-align: center;
+  background-color: green;
+  color: white;
+  padding-top: 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+}

@@ -1,0 +1,13 @@
+.navColor {
+  font-family: "Comfortiaa";
+  font-size: 18px;
+  background-color: var(--primary-color);
+}
+
+.nav-link {
+  color: var(--tertiary-color);
+}
+
+.nav-link:focus {
+  color: var(--quaternary-color);
+}

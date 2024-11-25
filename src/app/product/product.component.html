@@ -1,0 +1,14 @@
+<section *ngIf="product">
+  <div class="row">
+    <div class="col-6">
+      <img src="{{ product.picture }}" class="img-fluid" alt="{{ product.name }}"/>
+    </div>
+    <div class="col-6 sect-desc">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.desc }}</p>
+      <p>Prix: {{ product.price | currency : "EUR" }}</p>
+      <button type="button" class="btn btn-product">Acheter</button>
+      <a href="http://localhost:4200"><button>Retour</button></a>
+    </div>
+  </div>
+</section>

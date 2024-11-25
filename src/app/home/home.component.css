@@ -1,0 +1,70 @@
+h1 {
+  font-family: "Bubbleboddy";
+  color: var(--tertiary-color);
+}
+
+section.sect-about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--tertiary-color);
+  background-color: var(--primary-color);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.sect-listProduct {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--primary-color);
+  padding-top: 30px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Comfortiaa";
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-body {
+  font-size: 16px;
+  font-family: "Comfortiaa";
+}
+
+.btn-product {
+  background-color: var(--secondary-color);
+}
+
+.btn-product:hover {
+  background-color: var(--quaternary-color);
+  color: white;
+}
+
+.form-select {
+  background-color: var(--primary-color);
+  margin-top: 10px;
+  border-color: white;
+}
+
+.form-control {
+  background-color: var(--primary-color);
+  margin-top: 10px;
+  border-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 300px;
+}
+
+@media (min-width: 992px) {
+}

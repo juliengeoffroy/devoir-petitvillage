@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <section class="col-12 formContact">
+      <form (ngSubmit)="submitForm($event)" class="row g-3">
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom01"
+            placeholder="Nom"
+            [(ngModel)]="name"
+            [ngModelOptions]="{ standalone: true }"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name="input"
+            placeholder="Prénom"
+            [(ngModel)]="lastName"
+            [ngModelOptions]="{ standalone: true }"
+            required="true"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="email@example.com"
+            [(ngModel)]="email"
+            [ngModelOptions]="{ standalone: true }"
+            required
+          />
+        </div>
+        <div class="mb-3 textarea">
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="message"
+          ></textarea>
+        </div>
+        <div *ngIf="showErrorMessage" class="error-message">
+          <p>Tous les champs doivent être remplis</p>
+        </div>
+        <div *ngIf="messageSent" class="success-message">
+          <p>Message envoyé avec succès!</p>
+        </div>
+        <button type="submit" class="btn mb-3">Envoyer</button>
+      </form>
+    </section>
+
+    <section class="col-12 map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.1430620016004!2d2.548191212383608!3d49.00786319005613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e63e038e4ccf5b%3A0x42be0982f5ba62c!2sA%C3%A9roport%20de%20Paris-Charles%20de%20Gaulle!5e0!3m2!1sfr!2sfr!4v1712823725289!5m2!1sfr!2sfr"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+  </div>
+</div>
